@@ -1,5 +1,4 @@
 .App {
-    /*background-image: url('./wormz.png');*/
     text-align: center;
   }
   
@@ -112,10 +111,6 @@
   .text a {
     color: #00c8c8;
     text-decoration: none;
-  }
-  
-  .heading {
-    /*margin-top: 50px;*/
   }
   
   .Welcome {
