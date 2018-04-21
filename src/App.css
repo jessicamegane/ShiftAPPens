@@ -69,22 +69,22 @@
     margin-top: 100px;
     /*text-align: center;*/
     justify-content: center;
-
-  }
-  .Home-mapa {
-    text-align: left;
     position: absolute;
     margin-left: 10%;
     margin-right: 10%;
+    height: 600px;
+    background: rgba(255,255,255,0.6);
+
   }
 
-  .Home-descricao {
-    text-align: left;
-    margin-left: 70%;
-    position: relative;
-    height: 600px;
-    background-color: white;
-    opacity: 0.6;
+  #map {
+    min-width: 100px;
+    max-height: 300px;
+    max-width: 200px;
+    display: flex;
+    margin-left: 5%;
+    margin: auto;
+    
   }
 
   .NavBar {
