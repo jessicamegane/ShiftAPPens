@@ -13,7 +13,8 @@ const database = require('./functionals/database');
 // Config
 const CONFIG = JSON.parse(fs.readFileSync(__dirname + '/config.json', 'utf-8'))
 const db_url = "mongodb://" + CONFIG.db.username + ':' + CONFIG.db.password + '@' + CONFIG.db.address + ':' + CONFIG.db.port + '/' + CONFIG.db.dbname;
-console.log(db_url);
+
+// App
 var app = express();
 
 app.use(bodyParser.urlencoded());
