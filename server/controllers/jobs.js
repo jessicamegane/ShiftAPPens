@@ -1,5 +1,9 @@
 // Job.js
+var db = require('../functionals/database')
+
 exports.add = function(req, res) {
-    console.log(req.body.data);
-    res.send("Heyo");
+    new_user = req.body.data;
+
+    console.log(new_user);
+    console.log(db.libs)
 }
