@@ -1,33 +1,31 @@
-const fs = require('fs');
-const express = require('express');
-const bodyParser = require('body-parser');
-const server_ip_address = '127.0.0.1';
-const server_port = 8080;
-const controller_folder = __dirname + '/controllers/'
+var express = require('express');
+var bodyParser = require('body-parser');
+
+var libs = require('./functionals/libs');
+var database = require('./functionals/database');
+
+var server_port = 8080;
+var server_ip_address = '127.0.0.1';
 var app = express();
 
+var files = libs.files(__dirname + '/controllers');
+var handlers = libs.handlers(files, "../controllers/");
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
-var handlers = [];
-const controllers = fs.readdirSync(controller_folder)
-                      .map(f => f.replace('.js', ''));
-
-controllers.forEach(controller => {
-  handlers[controller] = require(controller_folder + controller);
-});
-
 app.post("/api", function(req, res) {
-  var handler = handlers[req.body.lib][req.body.action];
-  
-  if (handler)
-    handler(req, res);
-  else
-    res.sendStatus(500);
+    var handler = handlers[req.body.lib][req.body.action];
+
+    if (handler)
+        handler(req, res);
+    else
+        res.sendStatus(500);
 });
 
 app.listen(server_port, server_ip_address, function () {
-  console.log( "Listening on " + server_ip_address + ", port " + server_port )
+    database.connect(/*link*/, files);
+
+    console.log( "Listening on " + server_ip_address + ", port " + server_port )
 });
 
