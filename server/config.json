@@ -1,0 +1,11 @@
+{
+  "db": {
+    "username": "",
+    "password": "",
+    "address": "localhost",
+    "port": "47077",
+    "dbname": "shiftappens"
+  },
+  "address": "127.0.0.1",
+  "port": 8080
+}

@@ -1,11 +1,9 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-
-var libs = require('./functionals/libs');
-var database = require('./functionals/database');
-
-var server_port = 8080;
-var server_ip_address = '127.0.0.1';
+const fs = require('fs');
+const CONFIG = JSON.parse(fs.readFileSync(__dirname + '/config.json', 'utf-8'))
+const express = require('express');
+const bodyParser = require('body-parser');
+const libs = require('./functionals/libs');
+const database = require('./functionals/database');
 var app = express();
 
 var files = libs.files(__dirname + '/controllers');
@@ -23,9 +21,8 @@ app.post("/api", function(req, res) {
         res.sendStatus(500);
 });
 
-app.listen(server_port, server_ip_address, function () {
-    database.connect(/*link*/, files);
+app.listen(CONFIG.port, CONFIG.address, function () {
+    // database.connect("mongodb://localhost:27017/shiftappens", files);
 
-    console.log( "Listening on " + server_ip_address + ", port " + server_port )
+    console.log("Listening on " + CONFIG.address + ", port " + CONFIG.port)
 });
-
