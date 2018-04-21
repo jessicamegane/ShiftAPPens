@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Home from './components/Home'
 import NavBar from './components/NavBar'
 import About from './components/About'
 import Contacts from './components/Contacts'
@@ -9,9 +10,12 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <div id="home">
+          <Home />
+        </div>
         <h2 className="heading" id="about">ABOUT</h2>
             <About />
-        <h2 className="heading" id="contacts">CONTACTS US</h2>
+        <h2 className="heading" id="contacts">CONTACT US</h2>
             <Contacts />
       </div>
     );

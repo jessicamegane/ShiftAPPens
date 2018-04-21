@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    justify-content: center;
   }
   
   .header h1 {
@@ -31,27 +32,6 @@
   
   .section {
     padding: 50px;
-  
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .item {
-    position: relative;
-    width: 40%;
-    margin: 10px;
-  }
-  
-  .thumb {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
   }
   
   .overlay {
@@ -59,41 +39,12 @@
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #D6E5E3;
     opacity: .9;
     overflow: hidden;
     width: 100%;
     height:0;
     transition: .5s ease;
-  }
-  
-  .item:hover .overlay {
-    bottom: 0;
-    height: 100%;
-  }
-  
-  .blog-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .3s ease;
-    background-color: #bafffc;
-    border-radius: 5px;
-  }
-  
-  .item:hover .blog-overlay {
-    height: 100%;
-    opacity: 1;
-  }
-  
-  .item:hover .thumb {
-    width: 100%;
-    height: auto;
   }
   
   .text {
@@ -109,26 +60,91 @@
   }
   
   .text a {
-    color: #00c8c8;
+    color: #a6b9b9;
     text-decoration: none;
   }
   
-  .down-arrow {
+  .Home {
+    align-items: center;
+    margin-top: 100px;
+    /*text-align: center;*/
+    justify-content: center;
+
+  }
+  .Home-mapa {
+    text-align: left;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .Home-descricao {
+    text-align: left;
+    margin-left: 70%;
+    position: relative;
+    height: 600px;
     background-color: white;
+    opacity: 0.6;
+  }
+
+  .NavBar {
+    list-style-type: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #FF8D60;
+    z-index: 500;
   }
   
-  .main-pic {
-    border-radius: 50%;
-    width: 28vw;
-    padding: 20px;
+  .nav-item {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    float: right;
   }
   
+  .nav-last {
+    margin-right: 60px;
+  }
+  
+  .nav-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 36px;
+    display: block;
+    margin-left: 60px;
+    color: #000000;
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+    float: left;
+  }
+  
+  .nav-link {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+  
+  .nav-link:hover:not(.active) {
+    background-color: rgb(226, 231, 230);
+    color: #000000;
+  }
+  
+  .nav-link.active {
+    color: white;
+    background-color: #6E7271;
+  }
+
   .About {
-    /*background-image: url(./images/jumbo.jpg);*/
-    background-repeat: no-repeat;
-    background-size: 1500px;
-    background-position: bottom;
-    height: 700px;
+    height: 150px;
   }
   
   .about-intro {
@@ -165,72 +181,16 @@
   .About span {
     text-decoration: underline;
   }
-  .NavBar {
-    list-style-type: none;
-    width: 100%;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-    /*border: 1px solid #e7e7e7;*/
-    background-color: #f1f1f1;
-    z-index: 500;
-  }
-  
-  .nav-item {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    float: right;
-  }
-  
-  .nav-last {
-    margin-right: 60px;
-  }
-  
-  .nav-name {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 100;
-    font-size: 36px;
-    display: block;
-    margin-left: 60px;
-    color: black;
-    text-align: center;
-    padding: 7px 8px;
-    text-decoration: none;
-    float: left;
-  }
-  
-  .nav-link {
-    display: block;
-    color: #666;
-    text-align: center;
-    padding: 20px 20px;
-    text-decoration: none;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-  }
-  
-  .nav-link:hover:not(.active) {
-    background-color: #bafffc;
-    color: #16223C;
-  }
-  
-  .nav-link.active {
-    color: white;
-    background-color: #4CAF50;
-  }
   
   .Contactos {
+    position: absolute;
     list-style-type: none;
     width: 100%;
     overflow: hidden;
     text-align: center;
     align-items: center;
     z-index: 500;
-    background: #bafffc;
-    background: -webkit-linear-gradient(to right, #bafffc, #f1f1f1);
-    background: linear-gradient(to right, #bafffc, #f1f1f1);
+    background-color: #F9ECB8;
     display: grid;
     grid-template-columns: 10% 30% 50% 10%;
   }
@@ -238,12 +198,7 @@
   .Contactos div {
     text-align: center;
   }
-  
-  .Contactos img {
-    padding: 15px 0px;
-    width: 100%
-  }
-  
+    
   .Contactos a {
     text-decoration: none;
     color: black;
