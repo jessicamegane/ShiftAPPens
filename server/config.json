@@ -1,8 +1,8 @@
 {
   "db": {
-    "username": "",
-    "password": "",
-    "address": "localhost",
+    "username": "tokotoko",
+    "password": "shiftappens2018",
+    "address": "ds249839.mlab.com",
     "port": "47077",
     "dbname": "shiftappens"
   },
