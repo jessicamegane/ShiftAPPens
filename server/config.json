@@ -1,10 +1,10 @@
 {
   "db": {
-    "username": "tokotoko",
-    "password": "shiftappens2018",
-    "address": "ds249839.mlab.com",
-    "port": "47077",
-    "dbname": "shiftappens"
+    "username": "rafaelpaiva",
+    "password": "rafael.9000",
+    "address": "ds151259.mlab.com",
+    "port": "51259",
+    "dbname": "freetime"
   },
   "address": "127.0.0.1",
   "port": 8080
