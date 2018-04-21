@@ -2,23 +2,26 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require ('cookie-parser');
 
 // Modules
 const libs = require('./functionals/libs');
-const database = require('./functionals/database');
 const files = libs.files(__dirname + '/controllers');
 const handlers = libs.handlers(files, "../controllers/");
+const database = require('./functionals/database');
 
 // Config
 const CONFIG = JSON.parse(fs.readFileSync(__dirname + '/config.json', 'utf-8'))
-const db_url = "mongodb://" + CONFIG.db.username + ':' + CONFIG.db.password + '@' + CONFIG.db.address + ':' + CONFIG.db.port + '/' + CONFIG.db.dbname
-
+const db_url = "mongodb://" + CONFIG.db.username + ':' + CONFIG.db.password + '@' + CONFIG.db.address + ':' + CONFIG.db.port + '/' + CONFIG.db.dbname;
+console.log(db_url);
 var app = express();
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(cookieParser())
 
 app.post("/api", function(req, res) {
+    console.log(req.cookies);
     var handler = handlers[req.body.lib][req.body.action];
 
     if (handler)
@@ -28,7 +31,6 @@ app.post("/api", function(req, res) {
 });
 
 app.listen(CONFIG.port, CONFIG.address, function () {
-    database.connect(db_url, files);
-
+    database.connect(db_url, files)
     console.log("Listening on " + CONFIG.address + ", port " + CONFIG.port)
 });
