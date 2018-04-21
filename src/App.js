@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import About from './components/About'
 import Contacts from './components/Contacts'
 import './App.css';
+import MapContainer from './components/MapContainer';
 
 class App extends Component {
   render() {
@@ -12,6 +13,9 @@ class App extends Component {
         <NavBar />
         <div id="home">
           <Home />
+        </div>
+        <div id="map">
+          <MapContainer />
         </div>
         <h2 className="heading" id="about">ABOUT</h2>
             <About />
