@@ -5,7 +5,5 @@ exports.files = function(dir) {
 }
 
 exports.handlers = function(files, dir) {
-    var handlers = {}
-    for (name of files) handlers[name] = require(dir + name);
-    return handlers;
+    return files.reduce((acc, curr) => { acc[curr] = require(dir + curr); return acc; }, {});
 }

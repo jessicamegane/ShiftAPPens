@@ -4,7 +4,7 @@ exports.add = function(req, res) {
     db.insert(req.body.lib, req.body.data.item, function(err){
         if (err) res.send(err).status(400);
         else res.send(200);
-    })
+    });
 }
 
 exports.update = function(req, res) {
@@ -12,5 +12,5 @@ exports.update = function(req, res) {
         if (err) res.send(err).status(400);
         else if (!result) res.send(404);
         else res.send(result).status(200);
-    })
+    });
 }
