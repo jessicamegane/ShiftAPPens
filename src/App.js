@@ -13,7 +13,7 @@ class App extends Component {
         <div id="navbar">
         <NavBar />
         </div>
-        <div className="row" id="map" style={{height: "100vh"}}>
+        <div className="row" id="home" style={{height: "100vh"}}>
           <MapContainer />
           <Home/>
         </div>
