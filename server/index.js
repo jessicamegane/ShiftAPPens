@@ -1,4 +1,5 @@
 // Libraries
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require ('cookie-parser');
