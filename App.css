@@ -1,0 +1,298 @@
+.App {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 50px;
+    line-height: 30px;
+  }
+
+  .OptionBar{
+    display:flex;
+    margin:0;
+    border:0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .OptionBar label {
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+  }
+  
+  h2 {
+    font-size: 50px;
+    line-height: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+  }
+  
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+  }
+  
+  p {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+  }
+  
+  .section {
+    padding: 50px;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #D6E5E3;
+    opacity: .9;
+    overflow: hidden;
+    width: 100vw;
+    height:0;
+    transition: .5s ease;
+  }
+
+  .checks{
+
+  }
+  
+  .text {
+    white-space: nowrap;
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+  .text a {
+    color: #a6b9b9;
+    text-decoration: none;
+  }
+
+  .Home {
+    /*text-align: center;*/
+    justify-content: center;
+    position: absolute;
+    margin-left: 80%;
+    margin-right: 10%;
+    margin-top:2.5%;
+    height: 40%;
+    background: rgba(255,255,255,0.6);
+    right: -7%;
+    top: 8%;
+  }
+  
+  .NavBar {
+    list-style-type: none;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ED6161;
+    z-index: 500;
+  }
+  
+  .nav-item {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    float: right;
+  }
+  
+  .nav-last {
+    margin-right: 60px;
+  }
+  
+  .nav-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-size: 36px;
+    display: block;
+    margin-left: 60px;
+    color: #000000;
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+    float: left;
+  }
+  
+  .nav-link {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+  
+  .nav-link:hover:not(.active) {
+    background-color: rgb(226, 231, 230);
+    color: #000000;
+  }
+  
+  .nav-link.active {
+    color: white;
+    background-color: #6E7271;
+  }
+
+  .About {
+    background-color: #F5FDC6;
+    width:100vw;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  
+  .About div {
+    text-align: center;
+  }
+
+  .About a {
+    text-decoration: none;
+    color: black;
+    line-height: 10px;
+    font-size: 18px;
+  }
+  
+  .About h3 {
+    font-size: 30px;
+    line-height: 10px;
+  }
+   
+  .Contacts {
+    background-color: #4DB784;
+    position: absolute;
+    list-style-type: none;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    height: 700px;
+  }
+  
+  .Contacts div {
+    text-align: center;
+  }
+    
+  .Contacts a {
+    text-decoration: none;
+    color: black;
+    line-height: 10px;
+    font-size: 18px;
+  }
+  
+  .Contacts h3 {
+    font-size: 30px;
+    line-height: 10px;
+  }
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 20%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+hr {
+  margin: 0;
+  border: 1px dashed #999;
+}
+
+.divider {
+  margin: 0 0 100px;
+}
