@@ -8,6 +8,18 @@
     line-height: 30px;
   }
 
+  .OptionBar {
+    display:flex;
+    margin: 0;
+    border: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .OptionBar label {
+    margin-top: 10px;
+  }
+
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
@@ -46,6 +58,10 @@
     height:0;
     transition: .5s ease;
   }
+
+  .checks{
+
+  }
   
   .text {
     white-space: nowrap;
@@ -70,7 +86,8 @@
     position: absolute;
     margin-left: 80%;
     margin-right: 10%;
-    height: 90%;
+    margin-top: 2.5%;
+    height: 40%;
     background: rgba(255,255,255,0.6);
     right: -7%;
     top: 8%;

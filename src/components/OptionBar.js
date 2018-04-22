@@ -15,7 +15,7 @@ class OptionBar extends Component {
           <label><input type="checkbox" id="cb_v"></input>Voluntariado</label>
           <label><input type="checkbox" id="cb_f" ></input>Festivais</label>
           <label><input type="checkbox" id="cb_pt" ></input>Part-Time</label>
-          <label><input type="checkbox" id="cb_tp"></input>Trabahos Pontuais</label>
+          <label><input type="checkbox" id="cb_tp"></input>Trabalhos Pontuais</label>
         </ul>
     );
   }
