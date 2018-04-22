@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import mapa from "../images/mapa.png";
 
 class Home extends Component {
     render() {

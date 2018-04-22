@@ -10,17 +10,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div id="navbar">
         <NavBar />
-        <div id="home">
-          <Home />
         </div>
-        <div id="map">
-          <MapContainer />
+        <div style={{height: "100vh"}}>
+          <MapContainer id="map"/>
         </div>
-        <h2 className="heading" id="about">ABOUT</h2>
+        <div id="about">
             <About />
-        <h2 className="heading" id="contacts">CONTACT US</h2>
+        </div>
+        <div id="contacts">
             <Contacts />
+        </div>
       </div>
     );
   }

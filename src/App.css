@@ -2,12 +2,12 @@
     text-align: center;
     justify-content: center;
   }
-  
+
   .header h1 {
     font-size: 50px;
     line-height: 30px;
   }
-  
+
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 100;
@@ -42,7 +42,7 @@
     background-color: #D6E5E3;
     opacity: .9;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     height:0;
     transition: .5s ease;
   }
@@ -65,31 +65,18 @@
   }
   
   .Home {
-    align-items: center;
-    margin-top: 100px;
     /*text-align: center;*/
     justify-content: center;
     position: absolute;
-    margin-left: 10%;
+    margin-left: 80%;
     margin-right: 10%;
-    height: 600px;
+    height: 150px;
     background: rgba(255,255,255,0.6);
-
-  }
-
-  #map {
-    min-width: 100px;
-    max-height: 300px;
-    max-width: 200px;
-    display: flex;
-    margin-left: 5%;
-    margin: auto;
-    
   }
 
   .NavBar {
     list-style-type: none;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     margin: 0;
@@ -144,69 +131,54 @@
   }
 
   .About {
-    height: 150px;
-  }
-  
-  .about-intro {
-    font-family: "Raleway", sans-serif;
-    font-weight: 100;
-    color: black;
-    font-size: 40px;
-  }
-  
-  .about-intro strong {
-    font-weight: 900;
-    color: black;
-  }
-  
-  .about-item a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .about-item {
-    font-family: "Raleway", sans-serif;
-    font-weight: 200;
-    font-size: 20px;
-    color: black;
-    padding: 10px 40px;
-  }
-  
-  .about-item strong {
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    color: black;
-  }
-  
-  .About span {
-    text-decoration: underline;
-  }
-  
-  .Contactos {
-    position: absolute;
+    background-color: #F5FDC6;
+    width:100vw;
     list-style-type: none;
-    width: 100%;
-    overflow: hidden;
     text-align: center;
     align-items: center;
-    z-index: 500;
-    background-color: #F9ECB8;
-    display: grid;
-    grid-template-columns: 10% 30% 50% 10%;
+    height: 100vh;
   }
   
-  .Contactos div {
+  
+  .About div {
     text-align: center;
   }
-    
-  .Contactos a {
+
+  .About a {
     text-decoration: none;
     color: black;
     line-height: 10px;
     font-size: 18px;
   }
   
-  .Contactos h3 {
+  .About h3 {
+    font-size: 30px;
+    line-height: 10px;
+  }
+   
+  .Contacts {
+    background-color: #4DB784;
+    position: absolute;
+    list-style-type: none;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    height: 700px;
+  }
+  
+  .Contacts div {
+    text-align: center;
+  }
+    
+  .Contacts a {
+    text-decoration: none;
+    color: black;
+    line-height: 10px;
+    font-size: 18px;
+  }
+  
+  .Contacts h3 {
     font-size: 30px;
     line-height: 10px;
   }
