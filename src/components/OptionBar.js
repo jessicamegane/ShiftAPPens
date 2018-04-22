@@ -12,14 +12,10 @@ class OptionBar extends Component {
     }
     return (
         <ul className="OptionBar">
-          <input type="checkbox" id="cb_v"></input>
-          <l>Voluntariado</l>
-          <input type="checkbox" id="cb_f" ></input>
-          <l>Festivais</l>
-          <input type="checkbox" id="cb_pt" ></input>
-          <l>Part-Time</l>
-          <input type="checkbox" id="cb_tp"></input>
-          <l>Trabalhos pontuais</l>
+          <label><input type="checkbox" id="cb_v"></input>Voluntariado</label>
+          <label><input type="checkbox" id="cb_f" ></input>Festivais</label>
+          <label><input type="checkbox" id="cb_pt" ></input>Part-Time</label>
+          <label><input type="checkbox" id="cb_tp"></input>Trabahos Pontuais</label>
         </ul>
     );
   }
