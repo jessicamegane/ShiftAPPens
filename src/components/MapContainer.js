@@ -1,8 +1,29 @@
 import React from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
+var api = require('./api');
+
 export class MapContainer extends React.Component {
+
+    renderOffers(res) {
+    }
+
+    async getOffers(key) {
+        try {
+            api.fetch_api(true, {
+                lib: "offers",
+                action: "find",
+                data: {
+                    key: key
+                }
+            }, this.renderOffers);
+        } catch (err) {
+            return err;
+        }
+    }
+
     render() {
+        this.getOffers({});
         return (
             <Map google={this.props.google}
             zoom={14}
@@ -16,8 +37,8 @@ export class MapContainer extends React.Component {
                 position: "relative"
             }}
             >
-            <Marker onClick={this.onMarkerClick}
-                name={'Current location'} />
+                <Marker onClick={this.onMarkerClick}
+                    name={'Current location'} />
             </Map>
             
         );
