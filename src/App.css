@@ -270,3 +270,8 @@
   .offset-by-one-half.columns     { margin-left: 52%; }
 
 }
+
+hr {
+  margin: 0;
+  border: 1px dashed #999;
+}

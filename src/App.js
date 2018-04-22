@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './components/NavBar'
 import About from './components/About'
 import Contacts from './components/Contacts'
-import OptionBar from './components/OptionBar'
+import Home from './components/Home'
 import './App.css';
 import MapContainer from './components/MapContainer';
 
@@ -13,11 +13,9 @@ class App extends Component {
         <div id="navbar">
         <NavBar />
         </div>
-        <div id="optionBar">
-          <OptionBar />
-        </div>
-        <div id="map" style={{height: "100vh"}}>
+        <div className="row" id="map" style={{height: "100vh"}}>
           <MapContainer />
+          <Home/>
         </div>
         <div id="about">
             <About />

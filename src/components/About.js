@@ -6,7 +6,7 @@ class About extends Component {
       <div className="About">
         <div> </div>
           <div className="About-2">
-            <hr/>
+            <p>........................................................................................................................................</p>
             <h2>ABOUT US</h2>
             <h3>for.extra.timez, <b>o site que tem cenas extras!</b></h3>
           <p>Este site ajuda <strong> jovens </strong>a encontrar trabalhos part-time, em festivais ou voluntariado.</p>
