@@ -1,40 +1,45 @@
 import React from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
-var api = require('./api');
-
 export class MapContainer extends React.Component {
 
-    renderOffers(res) {
-        try {
-            res = res.json().map(e => {
-                return {
-                    coordenadas : {
-                        lat: e.coordenadas.x,
-                        lng: e.coordenadas.y,
-                    }
-                }
-            });
-            this.setState({
-                offers: res
-            })
-        } catch (err) {
-            return err;
-        }
-    }
-
-    async getOffers(key) {
-        try {
-            api.fetch_api(true, {
+    componentDidMount() {
+        fetch("http://127.0.0.1:8080/api",
+        {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
                 lib: "offers",
                 action: "find",
                 data: {
-                    key: key
+                    key: {}
                 }
-            }, this.renderOffers);
-        } catch (err) {
-            return err;
-        }
+            })
+        })
+        .then(res => res.json())
+        .then(res => res.map(e => {
+            return {
+                coordenadas : {
+                    lat: e.coordenadas.x,
+                    lng: e.coordenadas.y,
+                }
+            }
+        }))
+        .then(res => res.map((e, i) => (
+            <Marker
+                pinColor={"blue"}
+                position={e.coordenadas}
+                key={i}
+            />
+        )))
+        .then(res => {
+            this.setState({
+                offers: res
+            });
+        }).then(console.log);
     }
 
     constructor() {
@@ -45,7 +50,6 @@ export class MapContainer extends React.Component {
     }
 
     render() {
-        this.getOffers({});
         return (
             <Map google={this.props.google}
             zoom={14}
@@ -59,12 +63,7 @@ export class MapContainer extends React.Component {
                 position: "relative"
             }}
             >
-                {this.state.offers.map(e => (
-                    <Marker
-                        pinColor={"blue"}
-                        position={e.coordenadas}
-                    />
-                ))}
+                {this.state.offers}
             </Map>
         );
     }

@@ -8,10 +8,10 @@
     line-height: 30px;
   }
 
-  .OptionBar {
+  .OptionBar{
     display:flex;
-    margin: 0;
-    border: 0;
+    margin:0;
+    border:0;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -79,20 +79,20 @@
     color: #a6b9b9;
     text-decoration: none;
   }
-  
+
   .Home {
     /*text-align: center;*/
     justify-content: center;
     position: absolute;
     margin-left: 80%;
     margin-right: 10%;
-    margin-top: 2.5%;
+    margin-top:2.5%;
     height: 40%;
     background: rgba(255,255,255,0.6);
     right: -7%;
     top: 8%;
   }
-
+  
   .NavBar {
     list-style-type: none;
     width: 100vw;
@@ -249,7 +249,7 @@
   .eleven.columns                 { width: 91.3333333333%; }
   .twelve.columns                 { width: 100%; margin-left: 0; }
 
-  .one-third.column               { width: 30.6666666667%; }
+  .one-third.column               { width: 20%; }
   .two-thirds.column              { width: 65.3333333333%; }
 
   .one-half.column                { width: 48%; }

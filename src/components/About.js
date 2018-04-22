@@ -6,12 +6,12 @@ class About extends Component {
       <div className="About">
         <div> </div>
           <div className="About-2">
-            <p className="divider">........................................................................................................................................</p>
-            <h2>ABOUT US</h2>
-            <h3>for.extra.timez, <b>o site que tem cenas extras!</b></h3>
-          <p>Este site ajuda <strong> jovens </strong>a encontrar trabalhos part-time, em festivais ou voluntariado.</p>
-          <p> mais texto </p>
-          <h3> YUPIIII </h3>
+          <p className="divider">........................................................................................................................................</p>
+          <h2>ABOUT</h2>
+            <h3>for.extra.timez, <b>here you can find what to do with your extra time!</b></h3>
+          <p>We help <strong>young people </strong> find part-times, volunteering activities, festivals...</p>
+          <p> We know that sometimes it's difficult to find this kind of activities for us. </p>
+          <p> So we hope this site will help you easily find .......... </p>
           </div>
       </div>
     );

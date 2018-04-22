@@ -4,10 +4,8 @@ class Home extends Component {
     render() {
         return (
           <div className="Home one-third column">
+            <h3> <b> FILTROS </b> </h3> 
             <OptionBar />
-            <p> Descricao dos lugares: </p> 
-            <p>Um lugar </p> 
-            <p>outro lugar </p> 
           </div>
         );
       }
