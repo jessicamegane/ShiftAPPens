@@ -1,16 +1,13 @@
-exports.request = (object, action, verb, data_obj) => {
+exports.fetch = (body, callback, json) => {
   var url = 'http://localhost:8080/api';
   fetch(url, {
-    method: verb,
-    action: action,
+    method: "POST",
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: {
-      'object': object,
-      'action': action,
-      data: data_obj
-    }
-  });
+    body: JSON.stringify(data_obj)
+  })
+  .then(res => json ? res.json() : res)
+  .then(callback);
 }

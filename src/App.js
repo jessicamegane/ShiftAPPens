@@ -13,8 +13,9 @@ class App extends Component {
         <div id="navbar">
         <NavBar />
         </div>
-        <div style={{height: "100vh"}}>
+        <div className="row" style={{height: "100vh"}}>
           <MapContainer id="map"/>
+          <Home/>
         </div>
         <div id="about">
             <About />
