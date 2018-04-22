@@ -10,9 +10,8 @@ class Contacts extends Component {
           <h2>CONTACT US</h2>
           <h3>Contact</h3>
           <p>Email: paoqueijo@gmail.com</p>
-       
           <h3>This Site</h3>
-          <p>Made by <strong>Catarina, Jessica, Rafael, Victor</strong> at ShiftAPPens, using React, JavaScript and custom CSS</p>
+          <p>Made by <strong>Catarina, Jessica, Rafael and Victor</strong> at ShiftAPPens, using React, JavaScript and custom CSS.</p>
         </div>
       </div>
     );

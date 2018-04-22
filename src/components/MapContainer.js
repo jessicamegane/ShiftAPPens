@@ -16,10 +16,10 @@ export class MapContainer extends React.Component {
                 position: "relative"
             }}
             >
-                <Marker onClick={this.onMarkerClick}
-                    name={'Current location'} />
-                
+            <Marker onClick={this.onMarkerClick}
+                name={'Current location'} />
             </Map>
+            
         );
     }
 }
