@@ -1,16 +1,14 @@
 var db = require('../functionals/database');
+var req_res = require('../functionals/req_res');
 
-exports.add = function(req, res) {
-    db.insert(req.body.lib, req.body.data.item, function(err){
-        if (err) res.send(err).status(400);
-        else res.send(200);
-    });
+exports.add = (req, res) => {
+    db.insert(req.body.lib, req.body.data.item, req_res.res_err(res));
 }
 
-exports.update = function(req, res) {
-    db.update(req.body.lib, req.body.data.key, function(err, result){
-        if (err) res.send(err).status(400);
-        else if (!result) res.send(404);
-        else res.send(result).status(200);
-    });
+exports.update = (req, res) => {
+    db.update(req.body.lib, req.body.data.key, req_res.res_err_result(res));
+}
+
+exports.find = (req, res) => {
+    db.find(req.body.lib, req.body.data.key, req_res.res_err_result(res));
 }

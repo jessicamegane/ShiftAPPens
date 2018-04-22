@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-exports.files = function(dir) {
+exports.files = (dir) => {
     return fs.readdirSync(dir).map(f => f.replace('.js', ''));
 }
 

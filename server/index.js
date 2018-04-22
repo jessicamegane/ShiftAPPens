@@ -1,4 +1,5 @@
 // Libraries
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require ('cookie-parser');
@@ -21,7 +22,6 @@ app.use(bodyParser.json());
 app.use(cookieParser())
 
 app.post("/api", function(req, res) {
-    console.log(req.cookies);
     var handler = handlers[req.body.lib][req.body.action];
 
     if (handler)
