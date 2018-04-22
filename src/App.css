@@ -275,3 +275,7 @@ hr {
   margin: 0;
   border: 1px dashed #999;
 }
+
+.divider {
+  margin: 0 0 100px;
+}
