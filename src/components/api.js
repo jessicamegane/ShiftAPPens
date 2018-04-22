@@ -1,5 +1,5 @@
 exports.fetch_api = (json, body, callback) => {
-    fetch("http://dca6dff1.ngrok.io/api",
+    fetch("http://63a6ae4a.ngrok.io",
     {
         method: "POST",
         headers: {

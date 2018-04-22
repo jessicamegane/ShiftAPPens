@@ -6,6 +6,21 @@ var api = require('./api');
 export class MapContainer extends React.Component {
 
     renderOffers(res) {
+        try {
+            res = res.json().map(e => {
+                return {
+                    coordenadas : {
+                        lat: e.coordenadas.x,
+                        lng: e.coordenadas.y,
+                    }
+                }
+            });
+            this.setState({
+                offers: res
+            })
+        } catch (err) {
+            return err;
+        }
     }
 
     async getOffers(key) {
@@ -19,6 +34,13 @@ export class MapContainer extends React.Component {
             }, this.renderOffers);
         } catch (err) {
             return err;
+        }
+    }
+
+    constructor() {
+        super();
+        this.state = {
+            offers: []
         }
     }
 
@@ -37,10 +59,13 @@ export class MapContainer extends React.Component {
                 position: "relative"
             }}
             >
-                <Marker onClick={this.onMarkerClick}
-                    name={'Current location'} />
+                {this.state.offers.map(e => (
+                    <Marker
+                        pinColor={"blue"}
+                        position={e.coordenadas}
+                    />
+                ))}
             </Map>
-            
         );
     }
 }
